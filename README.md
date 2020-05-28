@@ -23,7 +23,7 @@ if Output is just one line, rename Input filename with Output.
 ex1) from https://atcoder.jp/contests/abc155/tasks/abc155_b
 -> 1inout\_APPROVED / 2inout\_DENIED
 
-ex2) from https://atcoder.jp/contests/abc155/tasks/abc155_c ,
+ex2) from https://atcoder.jp/contests/abc155/tasks/abc155_c 
 -> 1in ,1out / 2inout\_buffalo / 3inout\_kick / 4in, 4out
 
 
@@ -51,8 +51,13 @@ $ diff <(sh main < 1in) <(cat 1out)
 ```
 $ sh makeDir.sh https://atcoder.jp/contests/abc155/tasks/abc155_b
 [DONE] b155_abc generated.
+
 $ cd b155_abc/
+$ ls
+getTestCase.sh  problemURL
+
 $ sh getTestCase.sh
 $ ls
 1inout_APPROVED  2inout_DENIED  getTestCase.sh  problemURL
+
 ```
