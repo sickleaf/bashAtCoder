@@ -29,10 +29,12 @@ ex2) getTestCase.sh [c155\_abc], problemURL=https://atcoder.jp/contests/abc155/t
 
 # usecase
 
+
 ### make problem Dir/get testcase
 $ sh makeDir.sh "URL" 
 
 ### answer check
+
 $ sh main.sh < 1in
 
 $ diff <(sh main < 1in) <(cat 1out)
@@ -47,5 +49,6 @@ $ sh makeDir.sh https://atcoder.jp/contests/abc155/tasks/abc155_b
 $ cd b155_abc/
 $ ls
 1inout_APPROVED  2inout_DENIED  problemURL
+
 
 ```
