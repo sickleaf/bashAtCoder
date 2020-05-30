@@ -8,31 +8,31 @@ tool = makeDir.sh & getTestCase.sh
 
 make directory from problem URL
 
-ex1) from https://atcoder.jp/contests/abc155/tasks/abc155_b
--> [b155\_abc]
+ex1) makeDir.sh https://atcoder.jp/contests/abc155/tasks/abc155_b
+-> generate [b155\_abc]
 
-ex2) from https://atcoder.jp/contests/agc040/tasks/agc040_a
--> [a040\_agc] 
+ex2) makeDir.sh https://atcoder.jp/contests/agc040/tasks/agc040_a
+-> generate [a040\_agc] 
 
 ## getTestCase.sh
 
-generate all testcase in problem page.
+generate all testcase in problem webpage.
 
 if Output is just one line, rename Input filename with Output.
 
-ex1) from https://atcoder.jp/contests/abc155/tasks/abc155_b
+ex1) getTestCase.sh [b155\_abc], problemURL=https://atcoder.jp/contests/abc155/tasks/abc155_b
 -> 1inout\_APPROVED / 2inout\_DENIED
 
-ex2) from https://atcoder.jp/contests/abc155/tasks/abc155_c 
+ex2) getTestCase.sh [c155\_abc], problemURL=https://atcoder.jp/contests/abc155/tasks/abc155_c 
 -> 1in ,1out / 2inout\_buffalo / 3inout\_kick / 4in, 4out
 
 
 # usecase
 
-$ sh makeDir.sh "URL"   # run script
+### make problem Dir/get testcase
+$ sh makeDir.sh "URL" 
 
-$ (cd problemURL dir)
-
+### answer check
 $ sh main.sh < 1in
 
 $ diff <(sh main < 1in) <(cat 1out)
@@ -46,10 +46,6 @@ $ sh makeDir.sh https://atcoder.jp/contests/abc155/tasks/abc155_b
 
 $ cd b155_abc/
 $ ls
-getTestCase.sh  problemURL
-
-$ sh getTestCase.sh
-$ ls
-1inout_APPROVED  2inout_DENIED  getTestCase.sh  problemURL
+1inout_APPROVED  2inout_DENIED  problemURL
 
 ```
