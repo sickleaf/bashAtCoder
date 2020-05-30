@@ -45,9 +45,9 @@ $ diff <(sh main < 1in) <(cat 1out)
 ```
 $ sh makeDir.sh https://atcoder.jp/contests/abc155/tasks/abc155_b
 [DONE] b155_abc generated.
+[DONE] TestCase generated.
 
-$ cd b155_abc/
-$ ls
+$ ls b155_abc/
 1inout_APPROVED  2inout_DENIED  problemURL
 
 
