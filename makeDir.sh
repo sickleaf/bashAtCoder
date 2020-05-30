@@ -36,3 +36,7 @@ echo ${URL} > ${dirName}/problemURL
 cp ${testcaseSH} ${dirName}
 
 echo "[DONE] ${dirName} generated."
+
+testcaseSH=$(basename $testcaseSH)
+
+sh ${dirName}/${testcaseSH} && { echo "[DONE] TestCase generated."; rm ${dirName}/${testcaseSH}; }
