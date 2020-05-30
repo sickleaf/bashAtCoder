@@ -29,17 +29,9 @@ ex2) from https://atcoder.jp/contests/abc155/tasks/abc155_c
 
 # usecase
 
-### 1. makedir
+$ sh makeDir.sh "URL"   # run script
 
-$ sh makeDir.sh "URL"
-
-
-### 2. make testcase
 $ (cd problemURL dir)
-
-$ sh getTestCase.sh
-
-### 3. run main.sh with testcase
 
 $ sh main.sh < 1in
 
