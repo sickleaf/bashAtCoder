@@ -2,10 +2,10 @@
 
 ## generate directory
 
-errorMsg="AtCoder problem url is not given.set url to \$1."
+errorMsg="AtCoder problem url is not given. set url to \$1."
 
 # getTestCase.sh 
-testcaseSH=systemDir/getTestCase.sh
+testcaseSH=getTestCase.sh
 
 # check args
 [ $# -eq 1  ] &&  [ ! "$(echo $1 | grep https://atcoder.jp )" = "" ] || { echo ${errorMsg}; exit; }
@@ -32,7 +32,6 @@ mkdir -p ${dirName}
 # make problemURL
 echo ${URL} > ${dirName}/problemURL
 
-# copy script which generates testcase
-cp ${testcaseSH} ${dirName}
-
 echo "[DONE] ${dirName} generated."
+
+sh ${testcaseSH} ${dirName} && echo "[DONE] TestCase generated."
