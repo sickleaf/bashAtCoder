@@ -1,0 +1,1 @@
+paste <(cat /dev/stdin | sed "1s/.*/0 0 0/") <(cat /dev/stdin | sed 1d ) | tac | sed 1d | tac | awk 'function abs(v) {return v < 0 ? -v : v} {print abs($5-$2)+abs($6-$3),$4-$1, $4-$5-$6}' | awk '{if($1 <= $2 && $3%2==0) print "Yes"; else print "No"}' | sort | sed -n 1p
